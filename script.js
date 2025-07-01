@@ -1,8 +1,7 @@
-var result = ".";
+var result = "";
 
 
-var c = document.getElementById("c");
-//c.addEventListener("click",append(c.innerText));
+
 var divide = document.getElementById("divide");
 divide.addEventListener("click", function() {append(divide.innerText)});
 var up7 = document.getElementById("up7");
@@ -35,15 +34,15 @@ zero.addEventListener("click",function(){append(zero.innerText)});
 function append(text){
 console.log("ayooo");
     result += text;
-    var r = document.getElementById("result");
+    var r = document.getElementById("r");
     r.innerText= result;
     
 }
 
 var equal = document.getElementById("equal");
-equal.addEventListener("click",function(){esult()});
+equal.addEventListener("click",esult);
 function esult(){
-    var r = document.getElementById("result");
+    var r = document.getElementById("r");
     r.innerText = eval(result);
     result="";
 
@@ -51,4 +50,12 @@ function esult(){
 
 
 
+}
+var c = document.getElementById("c");
+c.addEventListener("click",del);
+function del(){
+     r = document.getElementById("r");
+ 
+    result ="";
+    r.innerText= result;
 }
